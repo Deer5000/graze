@@ -31,7 +31,7 @@ def NotifyHomeOwner(request):
 
 
 def send_mail_homeowner(email, subject, message):
-    obj = send_mail(subject,message,'lawnmowersf415@gmail.com',[email], fail_silently=False)
+    obj = send_mail(subject,message,'jarquevious.nelson@students.makeschool.com',[email], fail_silently=False)
     print("Email sent!")
 
 def ContactInquiry(request):
