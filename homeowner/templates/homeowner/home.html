@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>GRAZE</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        {% load static %}
+
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+        <!-- Fonts CSS-->
+        <link rel="stylesheet" href="{% static 'css/heading.css' %}">
+        <link rel="stylesheet" href="{% static 'css/body.css' %}">
+    </head>
+    <body id="page-top">
+    <div class="green-container">  
+        <nav class="navbar" id="mainNav">
+            <div class="container"><a class="logo" href="#page-top">GRAZE</a>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="login.html" class="join-button">Join as pro</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#about">HOW IT WORKS</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#benefits">BENEFITS</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <header>
+            <div class="main-section">
+                <!-- Masthead Subheading-->
+                <div class="row w-90 m-auto">
+                    <h1><i>Graze</i> Professional Lawn Mowing <small> for as low as $20</small></h1>
+                    <form action="{% url 'homeowner:notify' %}" method="POST">
+                        {% csrf_token %}
+                        <!-- <input id="email" placeholder="Email Address" name="zip" type="text" inputmode="numeric" pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$"> -->
+                        <input id="email" placeholder="Email Address" name="email" type="email">
+                        <button type="submit">Get Notified</button>
+                    </form>
+                </div>
+                <!-- <p>Let's start with your zip code - we'll text you a code to verify your phone.</p> -->
+                
+            </div>
+        </header>
+    </div>  
+        <!-- benifits section -->
+        <!-- <section class="page-section benifits" id="benifits">
+            <div class="container">
+                
+                                    
+            </div>
+        </div>  -->
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- About Section Content-->
+                <div class="row">
+                    <div class="image">
+                        <img src="https://production-next-images-cdn.thumbtack.com/i/358286049172414476/width/320/aspect/1-1.webp" alt="">
+                        <h3>Search.</h3>
+                        <p>Browse profiles, see prices and use filters to find pros who match your project.</p>
+                    </div>
+                    <div class="image">
+                        <img src="https://production-next-images-cdn.thumbtack.com/i/358286052030341136/width/320/aspect/1-1.webp" alt="">
+                        <h3>Chat.</h3>
+                        <p>Contact the pros you like to discuss project details.</p>
+                    </div>
+                    <div class="image">
+                        <img src="https://production-next-images-cdn.thumbtack.com/i/358286051291078670/width/320/aspect/1-1.webp" alt="">
+                        <h3>Hire.</h3>
+                        <p>Check pro availability and book appointments right in the app.</p>
+                        <button class="button button1">Find a Local Pro Near You</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+       <div class="neighborhood">
+            <img src="https://www.oceangloryhomes.com/wp-content/uploads/2019/07/corpus-christi-neighborhoods-1280x430.jpg" alt="neighborhood">
+        </div>
+        <div class="bottom">
+            <section class="page-section" id="benefits">
+                <div class="benefits">
+                    <!-- Benefits Section Heading-->
+                    <div class="text-center">
+                        <h2 class="page-section-heading text-secondary d-inline-block mb-0">BENEFITS</h2>
+                    </div>
+                    <!-- Contact Section Content-->
+                    <div class="row justify-content-center">
+                        <div class="benefits-content">
+                            <!-- <img src="https://production-next-images-cdn.thumbtack.com/i/358286049172414476/width/320/aspect/1-1.webp" alt=""> -->
+                            <h4>Lawn care professionals have their own lawn mowers and trimming equipment, so you don't need to spend money on a mower of your own.</h4>
+                            <p>They can also take care of your lawn beyond just a simple mow and trim with add-on services like laying down fertilizer or coming up with a mowing plan to keep your yard growing healthily year-round. Or, if your lawn has been neglected for awhile, they can revive it. No matter how poorly maintained your lawn has been in the past, the pros can bring a dried-up lawn back to life or tame an overgrown mess.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page-section" id="contact">
+                <div class="contact">
+                    <!-- Contact Section Heading-->
+                    <!-- <div class="text-center">
+                        <h2 class="page-section-heading text-secondary d-inline-block mb-0">CONTACT</h2>
+                    </div> -->
+                    <!-- Contact Section Content-->
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4">
+                            <div class="d-flex flex-column align-items-center">
+                                <div class="icon-contact mb-3"><i class="fas fa-mobile-alt"></i></div>
+                                <div class="text-muted">Phone</div>
+                                <div class="lead font-weight-bold">(555) 555-5555</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="d-flex flex-column align-items-center">
+                                <div class="icon-contact mb-3"><i class="far fa-envelope"></i></div>
+                                <div class="text-muted">Email</div><a class="lead font-weight-bold" href="mailto:name@example.com">name@example.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer text-center">
+                <div class="container">
+                    <div class="row">
+                        <!-- Footer Location-->
+                        <!-- <div class="col-lg-4 mb-5 mb-lg-0">
+                            <h4 class="mb-4">LOCATION</h4>
+                            <p class="pre-wrap lead mb-0">2215 John Daniel Drive
+    Clark, MO 65243</p>
+                        </div> -->
+                        <!-- Footer Social Icons-->
+                        <div class="col-lg-4 mb-5 mb-lg-0">
+                            <h4 class="mb-4">AROUND THE WEB</h4><a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/StartBootstrap"><i class="fab fa-fw fa-facebook-f"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.twitter.com/sbootstrap"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/startbootstrap"><i class="fab fa-fw fa-linkedin-in"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.dribble.com/startbootstrap"><i class="fab fa-fw fa-dribbble"></i></a>
+                        </div>
+                        <!-- Footer About Text-->
+                        <div class="col-lg-4">
+                            <h4 class="mb-4">GRAZE</h4>
+                            <!-- <p class="pre-wrap lead mb-0">Freelance is a free to use, MIT licensed Bootstrap theme created by Start Bootstrap</p> -->
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        <!-- Copyright Section-->
+        <section class="copyright py-4 text-center text-white">
+            <div class="container"><small class="pre-wrap">Copyright © Graze 2020</small></div>
+        </section>
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+        <div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
+        
+    </body>
+</html>

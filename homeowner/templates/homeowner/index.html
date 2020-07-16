@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="green-container">
+    {% include 'partials/navbar.html' %}
+
+    <div class="row justify-content-center text-center">
+        <h1 class="w-75 m-auto text-white main-section"><i>Graze</i> Professional Lawn Mowing <small> for as low as $20</small></h1>
+    </div>
+    <div class="row justify-content-center mt-5">
+        {% include 'partials/email.html' %}        
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://production-next-images-cdn.thumbtack.com/i/358286049172414476/width/320/aspect/1-1.webp" width="100%" alt="">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Search</h2>
+                    <p>Browse profiles, see prices and use filters to find pros who match your project.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://production-next-images-cdn.thumbtack.com/i/358286052030341136/width/320/aspect/1-1.webp" width="100%" alt="">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Chat</h2>
+                    <p>Contact the pros you like to discuss project details.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://production-next-images-cdn.thumbtack.com/i/358286051291078670/width/320/aspect/1-1.webp" width="100%" alt="">
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">Hire</h2>
+                    <p>Check pro availability and book appointments right in the app.</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="lawnmowing-bg">
+    <div class="container mt-5">
+        <div class="row justify-content-center p-5">
+                <div class="benefits">
+                    <!-- Benefits Section Heading-->
+                    <div class="text-left">
+                        <h2 class="text-white d-inline-block">BENEFITS</h2>
+                    </div>
+                    <!-- Contact Section Content-->
+                    <div class="row w-50 mt-5">
+                        <div class="benefits-content">
+                            <!-- <img src="https://production-next-images-cdn.thumbtack.com/i/358286049172414476/width/320/aspect/1-1.webp" alt=""> -->
+                            <h4 class="text-white">Lawn care professionals have their own lawn mowers and trimming equipment, so you don't need to spend money on a mower of your own.</h4>
+                            <p class="text-white">They can also take care of your lawn beyond just a simple mow and trim with add-on services like laying down fertilizer or coming up with a mowing plan to keep your yard growing healthily year-round. Or, if your lawn has been neglected for awhile, they can revive it. No matter how poorly maintained your lawn has been in the past, the pros can bring a dried-up lawn back to life or tame an overgrown mess.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center p-5">
+        {% include 'partials/contact.html' %}
+    </div>
+</div>
+
+{% endblock %}

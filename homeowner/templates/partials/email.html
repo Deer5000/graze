@@ -1,0 +1,6 @@
+<form action="{% url 'homeowner:notify' %}" method="POST">
+    {% csrf_token %}
+    <!-- <input id="email" placeholder="Email Address" name="zip" type="text" inputmode="numeric" pattern="^(?(^00000(|-0000))|(\d{5}(|-\d{4})))$"> -->
+    <input id="email" class="email_input" placeholder="Email Address" name="email" type="email">
+    <button class="email_button" type="submit">Get Notified</button>
+</form>

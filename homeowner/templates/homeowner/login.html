@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  
+    BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- BOOTSTRAP THEME -->
+   <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+    <!-- Custom Stylesheet -->
+    <!-- <link rel="stylesheet" href="landing.css"> -->
+    {% load static %}
+
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'css/heading.css' %}">
+        <link rel="stylesheet" href="{% static 'css/body.css' %}">
+    
+<!-- Navbar -->
+
+<nav id="navbar-example2" class="navbar navbar-dark bg-primary">
+  <a class="navbar-brand" href="index.html">Graze</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="#join">Join Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#benefits">Benefits</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#contact">Contact Us</a>
+    </li>
+  </ul>
+</nav>
+<div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+  <h4 id="join"></h4>
+
+<!-- Jumbotron -->
+
+<div class="jumbotron jumbotron-fluid">
+  <h1 class="display-3">Join Us!</h1>
+  <form class="form-horizontal">
+      <div class="col-md-4 col-md-offset-3 col-sm-8 col-sm-offset-2 ">
+          <div class="input-group ">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              <input id="first_name" type="text" class="form-control" name="first_name" placeholder="First Name">
+          </div>
+          <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+              <input id="last_name" type="text" class="form-control" name="last_name" placeholder="Last Name">
+          </div>
+          <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+              <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+          </div>
+          <br />
+          <div class="form-group"> 
+              <div class="col-sm-10">
+                  <button type="button" class="btn btn-success">Join!</button>
+              </div>
+          </div>
+      </div>
+  </form>
+</div>
+
+
+  <!-- How it Works -->
+
+<section class="bg-white py-10">
+  <div class="container">
+    <section>
+      <header style= "text-align:center" >
+        <h1 style="font-size: 50px;"> How Graze Works</h1>
+      </header>
+    </section>
+  <div class="row text-center">
+  <div class="col-lg-4 mb-5 mb-lg-0">
+    <div class="icon-stack icon-stack-xl bg-gradient-primary-to-secondary text-white mb-4"><i data-feather="layers"></i></div>
+      <h3>Get New Job Alert</h3>
+      <p class="mb-0"> Instantly revieve notifications when new jobs become available in your area.</p>
+  </div>
+  <div class="col-lg-4 mb-5 mb-lg-0">
+    <div class="icon-stack icon-stack-xl bg-gradient-primary-to-secondary text-white mb-4"><i data-feather="smartphone"></i></div>
+      <h3>View Details</h3>
+    <p class="mb-0">View all the information you need: location, yard size, price and more for every job.</p>
+  </div>
+  <div class="col-lg-4">
+    <div class="icon-stack icon-stack-xl bg-gradient-primary-to-secondary text-white mb-4"><i data-feather="code"></i></div>
+      <h3>Claim Jobs & Get Paid</h3>
+        <p class="mb-0">Easily accept new jobs and get paid the same day.</p>
+    </div>
+  </div>
+  </div>
+  <div class="svg-border-rounded text-light">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path></svg>
+  </div>
+</section>
+
+
+
+<!-- Cards/Benefits -->
+<h2 class="h1-responsive font-weight-bold text-center my-4" id="benfits">Benefits</h4>
+
+<div class="card-deck">
+  <div class="card">
+    <img src="images/money.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"> Fast Payments! </h5>
+      <p class="card-text">When the job is complete, you get paid. Payments are automatically deposited into your bank within 48 hours.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="images/mowing.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">New Jobs Daily!</h5>
+      <p class="card-text">Instantly recieve new job requests as soon as they become available. Homeowners request jobs daily.</p>
+    </div>  
+  </div>
+  <div class="card">
+    <img src="images/house.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Free and Fast to Join</h5>
+      <p class="card-text">Grazeis comple tely free to join and use. Once approved, landscapers can immediately start accepting nearby jobs. Most landscapers complete thier application less than 10 minutes.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Get in touch-->
+<h4 id="contact"></h4>
+
+<section class="mb-4">
+
+  <!--Section heading-->
+  <h2 class="font-weight-bold text-center my-4">Contact us</h2>
+  <!--Section description-->
+  <p class="text-center mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+      a matter of hours to help you.</p>
+
+  <!-- Conatact forms-->
+  <form id="contact-form" method="post" action="contact.php" role="form">
+
+    <div class="messages"></div>
+
+    <div class="controls">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_name">Firstname *</label>
+                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_lastname">Lastname *</label>
+                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_email">Email *</label>
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_need">Please specify your need *</label>
+                    <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                        <option value=""></option>
+                        <option value="Request quotation">Request quotation</option>
+                        <option value="Request order status">Request order status</option>
+                        <option value="Request copy of an invoice">Request copy of an invoice</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_message">Message *</label>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success btn-send" value="Send message">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- <p class="text-muted"> -->
+                    <!-- <strong>*</strong> These fields are required. Contact form template by
+                    <a href="https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form" target="_blank">Bootstrapious</a>.</p> -->
+            </div>
+        </div>
+    </div>
+
+</form>
+  
+
+  <!-- <h4 id="two">two</h4>
+  <p>...</p>
+  <h4 id="three">three</h4> -->
+
+
+
+
+  <!-- Content -->
+
+  
