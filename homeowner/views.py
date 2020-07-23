@@ -58,3 +58,4 @@ def ContactInquiry(request):
 
 def Unsubscribe(request, id):
     Notification.objects.filter(id=id).delete()
+    return render(request, 'homeowner/unsubscribe.html')
