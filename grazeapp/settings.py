@@ -31,9 +31,9 @@ ALLOWED_HOSTS = ['localhost', 'grazemylawn.herokuapp.com', '127.0.0.1']
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = os.getenv("EMAIL_PORT")
-EMAIL_HOST_USER = str(os.getenv('USERNAME'))
-EMAIL_HOST_PASSWORD = str(os.getenv('PASSWORD'))
+EMAIL_PORT = 587
+EMAIL_HOST_USER = os.getenv('USERNAME')
+EMAIL_HOST_PASSWORD = os.getenv('PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
