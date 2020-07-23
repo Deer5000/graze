@@ -6,8 +6,8 @@ from django.views.generic.edit import CreateView
 from django.http import HttpResponse 
 from .models import Notification, Contact
 from django.utils import timezone
-from django.core.mail import send_mail
-
+from django.core.mail import send_mail, EmailMultiAlternatives
+from django.conf import settings
 
 # Create your views here.
 class Home(ListView):
