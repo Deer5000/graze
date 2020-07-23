@@ -8,6 +8,8 @@ from .models import Notification, Contact
 from django.utils import timezone
 from django.core.mail import send_mail, EmailMultiAlternatives
 from django.conf import settings
+from django.template.loader import get_template
+
 
 # Create your views here.
 class Home(ListView):
@@ -22,17 +24,20 @@ def NotifyHomeOwner(request):
         notify_homeowner.pub_date = timezone.now()
         notify_homeowner.save()
 
-        send_mail_homeowner(email, "this is subject Notification", "Hi this is my message body")
+        send_email_attach(email, "this is subject Notification", 
+                            "Hi this is my message body", notify_homeowner.id)
 
         context = {
             'email': notify_homeowner.email
         }
         return render(request, 'homeowner/thankyou.html', context)
 
-
-def send_mail_homeowner(email, subject, message):
-    obj = send_mail(subject,message,'jarquevious.nelson@students.makeschool.com',[email], fail_silently=False)
-    print("Email sent!")
+def send_email_attach(email, subject, msg, id):
+    message = EmailMultiAlternatives(subject=subject, body=msg,from_email='jarquevious.nelson@students.makeschool.com', to=[email])
+    html_templ = get_template("email/welcome.html").render({'id':id, "email":email})
+    message.attach_alternative(html_templ, "text/html")
+    message.send()
+    print("message sent")
 
 def ContactInquiry(request):
     if request.method == "POST":
@@ -49,3 +54,7 @@ def ContactInquiry(request):
             'email': contact_inquiry.email
         }
         return render(request, 'homeowner/thankyou.html', context)
+
+
+def Unsubscribe(request, id):
+    Notification.objects.filter(id=id).delete()
