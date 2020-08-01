@@ -24,7 +24,7 @@ def NotifyHomeOwner(request):
         notify_homeowner.pub_date = timezone.now()
         notify_homeowner.save()
 
-        send_email_attach(email, "Welcome to our newsletter", 
+        send_email_attach(email, "Welcome To Graze Newsletter", 
                             "Hi this is my message body", notify_homeowner.id)
 
         context = {
